@@ -61,6 +61,7 @@
             sz=all.length;
         }
         for(let i=1;i<sz;i++){
+            if(all[i].getAttribute("data-sort-name")!=null)
             all[i].hidden = all[i].getAttribute("data-sort-name").search(txt) === -1;
         }
     }
