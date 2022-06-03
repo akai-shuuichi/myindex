@@ -44,7 +44,7 @@
     var sz=0;
     function change(text) {
         if(text.value.length>0){
-            update(txt)
+            update(text.value)
         }
     }
     function update(txt){
