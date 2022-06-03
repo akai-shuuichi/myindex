@@ -52,7 +52,7 @@
             all=document.getElementsByClassName("mdui-list-item");
             sz=all.length;
         }
-        for(let i=0;i<sz;i++){
+        for(let i=1;i<sz;i++){
             all[i].hidden = all[i].getAttribute("data-sort-name").search(txt) === -1;
         }
     }
