@@ -41,7 +41,7 @@
 </body>
 <script>
     function change(text) {
-        console.log(text)
+        console.log(text.value)
     }
 </script>
 </html>
