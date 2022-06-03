@@ -40,8 +40,21 @@
   	</div>
 </body>
 <script>
+    var all;
+    var sz=0;
     function change(text) {
-        console.log(text.value)
+        if(text.value.length>0){
+            update(txt)
+        }
+    }
+    function update(txt){
+        if(sz===0){
+            all=document.getElementsByClassName("mdui-list-item");
+            sz=all.length;
+        }
+        for(let i=0;i<sz;i++){
+            all[i].hidden = all[i].getAttribute("data-sort-name").search(txt) === -1;
+        }
     }
 </script>
 </html>
