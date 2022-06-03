@@ -131,8 +131,6 @@ class UploadController{
 	}
 
 	function upload_large_file($task){
-
-		
 		//创建上传会话
 		if(empty($task['url'])){
 			$data = onedrive::create_upload_session($task['remotepath']);
