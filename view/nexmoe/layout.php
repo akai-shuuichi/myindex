@@ -45,6 +45,14 @@
     function change(text) {
         if(text.value.length>0){
             update(text.value)
+        }else{
+            if(sz===0){
+                all=document.getElementsByClassName("mdui-list-item");
+                sz=all.length;
+            }
+            for(let i=1;i<sz;i++){
+                all[i].hidden = false;
+            }
         }
     }
     function update(txt){
