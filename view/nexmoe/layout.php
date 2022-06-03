@@ -33,10 +33,15 @@
 			<!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>-->
 		</div>
             <div class="mdui-textfield">
-                <input class="mdui-textfield-input" type="text" placeholder="User Name"/>
+                <input class="mdui-textfield-input" type="text" onchange="" placeholder="关键词"/>
             </div>
 		</div>
     	<?php view::section('content');?>
   	</div>
 </body>
+<script>
+    function change(text) {
+        console.log(text)
+    }
+</script>
 </html>
