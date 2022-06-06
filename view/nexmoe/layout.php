@@ -36,7 +36,7 @@
                 <input class="mdui-textfield-input" type="text" onchange="change(this)" placeholder="关键词"/>
             </div>
             <div class="mdui-toolbar nexmoe-item">
-                <i id="total" class=" mdui-icon-dark" style="margin:0;">共计<?php count($navs)?></i>
+                <i id="total" class=" mdui-icon-dark" style="margin:0;">共计<?php echo count($navs)?></i>
             </div>
 		</div>
 
