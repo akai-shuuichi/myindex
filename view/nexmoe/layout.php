@@ -54,6 +54,7 @@
         if(text.value.length>0){
             update(text.value)
         }else{
+            document.getElementById("count").innerText="共计"+sz;
             if(sz===0){
                 all=document.getElementsByClassName("mdui-list-item");
                 sz=all.length;
@@ -78,8 +79,6 @@
                 }else{
                     nowshow++;
                 }
-
-
         }
         document.getElementById("count").innerText="共计"+nowshow;
     }
