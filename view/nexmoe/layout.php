@@ -36,7 +36,7 @@
                 <input class="mdui-textfield-input" type="text" onchange="change(this)" placeholder="关键词"/>
             </div>
             <div class="mdui-toolbar nexmoe-item">
-                <i id="total" class=" mdui-icon-dark" style="margin:0;">共计<?php echo count($navs)?></i>
+                <i id="total" class=" mdui-icon-dark" style="margin:0;">共计</i>
             </div>
 		</div>
 
@@ -46,6 +46,10 @@
 <script>
     var all;
     var sz=0;
+    var nowshow=0;
+    all=document.getElementsByClassName("mdui-list-item");
+    sz=all.length;
+    document.getElementById("count").innerText="共计"+sz;
     function change(text) {
         if(text.value.length>0){
             update(text.value)
@@ -54,6 +58,7 @@
                 all=document.getElementsByClassName("mdui-list-item");
                 sz=all.length;
             }
+            nowshow=0;
             for(let i=1;i<sz;i++){
                 all[i].hidden = false;
             }
