@@ -36,7 +36,7 @@
                 <input class="mdui-textfield-input" type="text" onchange="change(this)" placeholder="关键词"/>
             </div>
             <div class="mdui-toolbar nexmoe-item">
-                <i id="total" class=" mdui-icon-dark" style="margin:0;">共计</i>
+                <i id="count" class=" mdui-icon-dark" style="margin:0;">共计</i>
             </div>
 		</div>
 
@@ -58,7 +58,7 @@
                 all=document.getElementsByClassName("mdui-list-item");
                 sz=all.length;
             }
-            nowshow=0;
+            ;
             for(let i=1;i<sz;i++){
                 all[i].hidden = false;
             }
@@ -68,11 +68,20 @@
         if(sz===0){
             all=document.getElementsByClassName("mdui-list-item");
             sz=all.length;
+            nowshow=sz;
         }
+        nowshow=0
         for(let i=1;i<sz;i++){
             if(all[i].getAttribute("data-sort-name")!=null)
-            all[i].hidden = all[i].getAttribute("data-sort-name").search(txt) === -1;
+                if(all[i].getAttribute("data-sort-name").search(txt) === -1){
+                    all[i].hidden = true;
+                }else{
+                    nowshow++;
+                }
+
+
         }
+        document.getElementById("count").innerText="共计"+nowshow;
     }
 </script>
 </html>
